@@ -1,0 +1,20 @@
+services:
+
+  # ── Redis ────────────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: github_analyzer_redis
+    ports:
+      - "6379:6379"              # Maps container port 6379 → host localhost:6379
+    volumes:
+      - redis_data:/data         # Persist cache across restarts
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  redis_data:
