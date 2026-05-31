@@ -10,7 +10,7 @@ GITHUB PROFILE ANALYZER API
 
 [GitHub Profile Analyzer API](https://github.com/palashtinkhede/github-analyzer) is a highly performant REST API backend service built with **Node.js** and **Express.js**. It fetches GitHub user profiles, extracts deep insights (aggregate stars, forks, top languages, account age, etc.), and stores them in a **MySQL** database with a **Redis** caching layer for near-instant repeated reads. The application supports profile analysis, pagination, sorting, side-by-side comparisons, cache management, validation, and rate-limiting, and the entire stack can be run containerized with **Docker** and **Docker Compose**.
 
-# NOTE: postman collection is also provided in **postman_collection folder**
+### NOTE: postman collection is also provided in **postman_collection folder**
 
 ## Overview
 The GitHub Profile Analyzer API is an enterprise-ready, easy-to-use backend service that leverages local database persistence and distributed caching. Some key features include:
